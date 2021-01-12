@@ -14,16 +14,15 @@ export default {
       title: 'Link',
     },
     {
-      name: 'openGraphImage',
+      name: 'previewImage',
       type: 'image',
-      title: 'Open Graph Image',
-      description: 'Image for sharing previews on Facebook, Twitter etc.',
-    },
+      title: 'Preview'
+    }
   ],
   preview: {
     select: {
       title: 'title',
-      media: 'openGraphImage',
+      media: 'previewImage',
     },
   },
 }
