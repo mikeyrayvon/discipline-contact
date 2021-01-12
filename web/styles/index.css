@@ -1,0 +1,39 @@
+@import 'fonts.css';
+
+/* purgecss start ignore */
+
+@tailwind base;
+@tailwind components;
+
+/* purgecss end ignore */
+
+html, body {
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 95%;
+}
+
+@screen sm {
+
+}
+
+@screen md {
+
+}
+
+@screen lg {
+
+}
+
+@screen xl {
+
+}
+
+@screen 2xl {
+
+}
+
+@tailwind utilities;
