@@ -21,15 +21,14 @@ export default {
       of: [{type: 'block'}]
     },
     {
-      title: 'Directors',
-      name: 'directors',
+      title: 'Projects',
+      name: 'projects',
       type: 'array',
       of: [
         {
           type: 'reference',
           to: [
-            {type: 'person'},
-            {type: 'bovinae'}
+            {type: 'project'},
           ]
         }
       ]
