@@ -15,6 +15,26 @@ export default {
       title: 'Title',
     },
     {
+      title: 'About',
+      name: 'about',
+      type: 'array',
+      of: [{type: 'block'}]
+    },
+    {
+      title: 'Directors',
+      name: 'directors',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {type: 'person'},
+            {type: 'bovinae'}
+          ]
+        }
+      ]
+    },
+    {
       name: 'description',
       type: 'text',
       title: 'Description',
