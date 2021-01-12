@@ -19,9 +19,7 @@ const Landing = ({ docs }) => {
       </Head>
 
       <main>
-        <h1>
-          Discipline
-        </h1>
+        <img src='discipline-logo.svg' className='w-60' />
       </main>
     </div>
   )
