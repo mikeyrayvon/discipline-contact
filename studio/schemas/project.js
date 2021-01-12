@@ -18,7 +18,6 @@ export default {
       type: 'image',
       title: 'Open Graph Image',
       description: 'Image for sharing previews on Facebook, Twitter etc.',
-      fieldset: 'metadata',
     },
   ],
   preview: {
