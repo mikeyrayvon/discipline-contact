@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import BlockContent from '@sanity/block-content-to-react'
 
 import Container from '../components/Container'
 
@@ -12,6 +13,7 @@ const query = `*[_type == "page"] {
 `;
 
 const Landing = ({ docs }) => {
+  console.log(docs[0])
   return (
     <div className='flex flex-col min-h-screen'>
       <Head>
@@ -21,7 +23,7 @@ const Landing = ({ docs }) => {
 
       <header className='mt-40 mb-24 flex-grow'>
         <Container>
-          <img src='discipline-logo.svg' className='w-32 md:w-48 lg:w-64' />
+          <img src='discipline-logo.svg' className='w-40 md:w-52 lg:w-64' />
         </Container>
       </header>
 
@@ -45,13 +47,13 @@ const Landing = ({ docs }) => {
         </section>
       </main>
 
-      <footer className='mb-24'>
+      <footer className='mb-12'>
         <Container>
           <div className='flex flex-wrap lg:flex-nowrap -mx-8'>
-            <div className='px-8'>
-              {docs[0].about}
+            <div className='px-8 mb-12'>
+              <BlockContent blocks={docs[0].about} />
             </div>
-            <div className='px-8'>
+            <div className='px-8 mb-12'>
               <Link href='mailto:contact@discipline.contact'>
                 <a>contact@discipline.contact</a>
               </Link>
