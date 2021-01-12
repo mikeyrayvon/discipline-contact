@@ -8,12 +8,13 @@ import sanity from '../lib/sanity'
 
 const query = `*[_type == "page"] {
   about,
+  contact,
   "projects": projects[]->
 }
 `;
 
 const Landing = ({ docs }) => {
-  console.log(docs[0])
+  console.log(docs[0].contact)
   return (
     <div className='flex flex-col min-h-screen'>
       <Head>
@@ -49,15 +50,19 @@ const Landing = ({ docs }) => {
 
       <footer className='mb-12'>
         <Container>
-          <div className='flex flex-wrap lg:flex-nowrap -mx-8'>
-            <div className='px-8 mb-12'>
-              <BlockContent blocks={docs[0].about} />
-            </div>
-            <div className='px-8 mb-12'>
-              <Link href='mailto:contact@discipline.contact'>
-                <a>contact@discipline.contact</a>
-              </Link>
-            </div>
+          <div className='flex flex-wrap justify-between lg:flex-nowrap -mx-8'>
+            {docs[0].about &&
+              <div className='px-8 mb-12 lg:w-2/3 '>
+                <BlockContent blocks={docs[0].about} />
+              </div>
+            }
+            {docs[0].contact &&
+              <div className='px-8 mb-12'>
+                <Link href='mailto:inquire@discipline.contact'>
+                  <a className='underline'>inquire@discipline.contact</a>
+                </Link>
+              </div>
+            }
           </div>
         </Container>
       </footer>

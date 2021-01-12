@@ -21,6 +21,12 @@ export default {
       of: [{type: 'block'}]
     },
     {
+      title: 'Contact',
+      name: 'contact',
+      type: 'array',
+      of: [{type: 'block'}]
+    },
+    {
       title: 'Projects',
       name: 'projects',
       type: 'array',
