@@ -14,7 +14,6 @@ const query = `*[_type == "page"] {
 `;
 
 const Landing = ({ docs }) => {
-  console.log(docs[0].contact)
   return (
     <div className='flex flex-col min-h-screen'>
       <Head>
