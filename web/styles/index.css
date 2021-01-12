@@ -8,8 +8,9 @@
 /* purgecss end ignore */
 
 html, body {
-  font-size: 12px;
+  font-size: 16px;
   overflow-x: hidden;
+  background-color: #f2f2f2;
 }
 
 .container {
