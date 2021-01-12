@@ -24,7 +24,7 @@ const Landing = ({ docs }) => {
 
       <header className='mt-40 mb-24 flex-grow'>
         <Container>
-          <img src='discipline-logo.svg' className='w-40 md:w-52 lg:w-64' />
+          <img src='discipline-logo.svg' className='w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 2xl:w-96' />
         </Container>
       </header>
 
