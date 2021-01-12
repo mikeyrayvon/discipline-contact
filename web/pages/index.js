@@ -58,9 +58,7 @@ const Landing = ({ docs }) => {
             }
             {docs[0].contact &&
               <div className='px-8 mb-12'>
-                <Link href='mailto:inquire@discipline.contact'>
-                  <a className='underline'>inquire@discipline.contact</a>
-                </Link>
+                <BlockContent blocks={docs[0].contact} />
               </div>
             }
           </div>
