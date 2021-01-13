@@ -7,11 +7,22 @@ import Container from '../components/Container'
 import sanity from '../lib/sanity'
 
 const query = `*[_type == "page"] {
-  about,
-  contact,
+  ...,
   "projects": projects[]->
 }
 `;
+
+const serializers = {
+  marks: {
+    link: ({mark, children}) => {
+      return (
+        <Link href={mark.href}>
+          <a className='hover:underline'>{children}</a>
+        </Link>
+      )
+    }
+  }
+}
 
 const Landing = ({ docs }) => {
   return (
@@ -35,7 +46,7 @@ const Landing = ({ docs }) => {
                 return (
                   <li className='px-8 mb-12' key={`project_${project._id}`}>
                     <Link href={project.link}>
-                      <a>
+                      <a className='hover:underline'>
                         {project.title}
                       </a>
                     </Link>
@@ -52,12 +63,12 @@ const Landing = ({ docs }) => {
           <div className='flex flex-wrap justify-between lg:flex-nowrap -mx-8'>
             {docs[0].about &&
               <div className='px-8 mb-12 lg:w-2/3 '>
-                <BlockContent blocks={docs[0].about} />
+                <BlockContent blocks={docs[0].about} serializers={serializers} />
               </div>
             }
             {docs[0].contact &&
               <div className='px-8 mb-12'>
-                <BlockContent blocks={docs[0].contact} />
+                <BlockContent blocks={docs[0].contact} serializers={serializers} />
               </div>
             }
           </div>

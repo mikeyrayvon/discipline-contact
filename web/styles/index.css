@@ -8,6 +8,7 @@
 /* purgecss end ignore */
 
 html, body {
+  @apply font-altehaas;
   font-size: 16px;
   overflow-x: hidden;
   background-color: #f2f2f2;
