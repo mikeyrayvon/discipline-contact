@@ -46,7 +46,7 @@ const Landing = ({ docs }) => {
                 return (
                   <li className='px-8 mb-12' key={`project_${project._id}`}>
                     <Link href={project.link}>
-                      <a className='hover:underline'>
+                      <a className='hover:underline text-2xl'>
                         {project.title}
                       </a>
                     </Link>
